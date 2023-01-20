@@ -1,0 +1,483 @@
+/*----------------------------------------GENERAL------------------------------------*/
+* {
+    margin: 0;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1,
+h3 {
+    margin: auto;
+}
+
+header {
+    background-color: red;
+    flex: 3 0 auto;
+    display: flex;
+}
+/*                    main                      */
+main {
+    flex: 30 0 auto;
+    display: flex;
+
+}
+
+aside {
+    margin-left: 2px;
+    background-color: rgb(72, 72, 72);
+    flex: 1 0 auto;
+    display: flex;
+    height: 4%;
+    border-radius: 15px;
+    transition-duration: 3s;
+}
+aside h3{
+    margin: 0 auto auto ;
+    color: beige;
+    background: rgb(61, 133, 248);
+}
+
+section {
+    flex: 4 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+main section:nth-of-type(2) {
+    flex: 8 0 auto;
+}
+section h3{
+    color: beige;
+    margin: 25px auto;
+    padding: 10px 10px;
+    background-color: rgb(51, 2, 187);
+    border-radius: 40px;
+    letter-spacing: 2px;
+    
+}
+
+article{
+    flex: 4 0 auto;
+}
+article div {
+    width: 90%;
+    height: 90%;
+    border: 3px solid rgb(72, 72, 72);
+    border-radius: 20px;
+    margin: auto;
+    position: relative;
+}
+/*                    Footer                      */
+footer {
+    background-color: black;
+    color: #890C99;
+    flex: 2 0 auto;
+    display: flex;
+}
+
+footer h3 {
+    width: 100%;
+    margin: auto;
+}
+
+/*-------------------------------------Exercice test-----------------------------------------*/
+
+aside:hover {
+    height: 98%;
+} 
+/*-------------------------------------Exercice Carré-----------------------------------------*/
+
+#carre {
+    display: flex;
+}
+@keyframes tourne {
+    form {
+        background-color: yellow;
+        transform: rotate(0deg);
+    }
+    to {
+        background-color: red;
+        transform: rotate(450deg);
+    }
+} 
+#carre div {
+    border-width: 2px;
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    animation-name: tourne;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction:alternate;
+  
+}
+/*-------------------------------------Exercice Balle-----------------------------------------*/
+/*                  general                   */
+#balle {
+    display: flex;
+    overflow: hidden;
+}
+#balle div {
+    margin-bottom: 10px;
+    width: 40px;
+    height: 140px;
+    border-radius: 0;
+    position: relative;
+    
+}
+/*                  animation rebond                   */
+@keyframes rebond {
+    0% {
+        top: -44px;
+    }
+    19% {
+        top: 105px;
+        height: 32px;
+    }
+    20% {
+        top: 100px;
+        height: 38px;
+    }
+    30% {
+        top: 20px;
+    }
+    42% {
+        top: 105px;
+        height: 32px;        
+    }
+    43% {
+        top: 100px;
+        height: 38px;        
+    }
+    51% {
+        top: 60px;
+    }      
+    52% {
+        top: 57px; 
+
+    }
+    64% {
+        top: 105px;      
+        height: 32px;        
+    }
+    66% {
+        top: 100px;      
+        height: 38px;        
+    }
+    72% {
+        top: 90px;       
+    }
+    77% {
+        top: 105px;      
+        height: 32px;        
+    }
+    79% {
+        top: 100px;      
+        height: 38px;
+    }
+    85% {
+        top: 100px;      
+        height: 38px;  
+    }
+    89% {
+        top: 180px;       
+        left: -1px;
+    }
+    /* manip pour faire disparaitre la balle du cadre et la faire réapparaitre à sa position initiale */
+    90% {
+        top: 180px;
+        left: 300px;     
+    }
+    91% {
+        top: -200px;
+        left: 300px;     
+    }
+    92% {
+        top: -200px;
+        left: -1px;     
+    }
+    95% {
+        top: -44px;
+    }
+    100% {
+        top: -44px;
+    }
+} 
+#balle div div {
+    position: absolute;
+    left: -1px;
+    top: -44px;
+    border-width: 2px;
+    border-radius: 100%;
+    width: 38px;
+    height: 38px;
+    background-color: #890C99;
+    animation-name: rebond;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+
+}
+/*-------------------------------chargement-------------------------------*/
+@keyframes loading {
+    form {
+        background-color: black;
+    }
+    to {
+        background-color: beige;
+    }
+}
+#chargement {
+    min-height: 170px;
+    max-height: 170px;
+    min-width: 360px;
+    max-width: 360px;
+    overflow: hidden;
+}
+#chargement div {
+    background-color: black;
+    position: absolute;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    top: 45px;
+    left: 20px;
+    animation-name: loading;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+}
+#chargement #load1 {
+    left: 130px;
+    animation-delay: 2s;
+}
+#chargement #load2 {
+    left: 240px;
+    animation-delay: 3s;
+}
+/*-------------------------------Course-------------------------------*/
+/*                   general                 */
+#course {
+    overflow: hidden;
+    background-image: url(../images/circuit.jpg);
+    background-size: 100%;
+    background-clip: padding-box;
+    width: 355px;
+    height: 200px;
+}
+#course img {
+    position: absolute;
+    width: 30px;
+    transform: rotate(180deg);
+    top: 163px;
+}
+/*                 animation course                    */
+@keyframes driver{
+    0%{
+        top: 163px;
+        left: 180px;
+        transform: rotate(180deg);
+    }
+    10%{
+        top: 163px;
+        left: 55px;
+        transform: rotate(180deg);
+    }
+    20%{
+        transform: rotate(300deg);
+        top: 130px;
+        left: 10px;
+    }
+    25%{
+        transform: rotate(340deg);
+        top: 70px;
+        left: 8px;
+    }
+    39%{
+        transform: rotate(380deg);
+        top: 20px;
+        left: 20px;
+    }
+    45%{
+        transform: rotate(360deg);
+        top: 2px;
+        left: 50px;
+    }
+    60%{
+        transform: rotate(360deg);
+        top: 2px;
+        left: 265px;
+    }
+    75%{
+        transform: rotate(485deg);
+        top: 38px;
+        left: 310px;
+    }
+    85%{
+        transform: rotate(540deg);
+        top: 125px;
+        left: 310px;
+    }
+    92%{
+        transform: rotate(560deg);
+        top: 159px;
+        left: 280px;
+    }
+    95%{
+        transform: rotate(540deg);
+        top: 163px;
+        left: 265px;
+    }
+    100%{
+        transform: rotate(540deg);
+        top: 163px;
+        left: 180px;
+    }
+}
+#course img{
+    top: 163px;
+    left: 180px;
+    animation-name: driver;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+}
+/*     position et delay pour les autres voiture       */
+#course img:nth-child(2){
+    left: 211px;
+    animation-delay: 1s;
+}
+#course img:nth-child(3){
+    left: 242px;
+    animation-delay: 2s;
+}
+#course img:nth-child(4){
+    left: 273px;
+    animation-delay: 3s;
+}
+/*-----------------------------------------------Exercice animation 3D---------------------------------------*/
+#animation {
+    overflow: hidden;
+    height: 540px;
+    width: 600px;
+    position: relative;
+    
+}
+/*              animation bougeant et reduisant le carousselle             */
+@keyframes move {
+    0% {
+        top: -30px;
+        left: -20px;
+    }
+    25% {
+        top: 100px;
+        left: 300px;
+        transform: scale(1.2);
+    }
+    50% {
+        top: 250px;
+        left: -60px;
+        transform: scale(0.7);
+        
+    }
+    75% {
+        top: 400px;
+        left: 300px;
+        transform: scale(1.2);
+    }
+    100% {
+        top: -30px;
+        left: -20px;
+        transform: scale(1);
+    }
+}
+#deplacement {
+    border: none;
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    transform-style: preserve-3d;
+    animation-name: move;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    
+}
+/*             animation permetteant la rotation du carousselle            */
+@keyframes rota{
+    0%{
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+    25%{
+        transform: rotateY(180deg) rotateX(35deg);
+    }
+    50%{
+        transform: rotateY(360deg) rotateX(0deg);
+    }
+    75%{
+        transform: rotateY(540deg) rotateX(-35deg);
+    }
+    100%{
+        transform: rotateY(720deg) rotateX(0deg);
+    }
+}
+#carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation-name: rota;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    border: none;
+}
+#carousel div{
+    position: absolute;
+    left: 100px;
+    top: 30px;
+    border-radius: 0px;
+    width: 40px;
+    height: 40px;
+}
+#carousel div:nth-child(1){
+    background-color: cyan;
+    transform: rotateY(0deg) translateZ(100px);
+}
+#carousel div:nth-child(2){
+    background-color: pink;
+    transform: rotateY(135deg) translateZ(100px);
+}
+#carousel div:nth-child(3){
+    background-color: white;
+    transform: rotateY(90deg) translateZ(100px);
+}
+#carousel div:nth-child(4){
+    background-color: #890C99;
+    transform: rotateY(45deg) translateZ(100px);
+}
+#carousel div:nth-child(5){
+    background-color: green;
+    transform:rotateY(180deg) translateZ(100px);
+}
+#carousel div:nth-child(6){
+    background-color: blue;
+    transform: rotateY(315deg) translateZ(100px);
+}
+#carousel div:nth-child(7){
+    background-color: red;
+    transform: rotateY(270deg) translateZ(100px);
+}
+#carousel div:nth-child(8){
+    background-color: yellow;
+    transform: rotateY(225deg) translateZ(100px);
+}
