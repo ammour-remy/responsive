@@ -10,14 +10,16 @@ section {
 /*                               responsive                                */
 
 @media screen {
-    
     footer {
         display: none;
     }
+    
 }
 @media (min-width: 640px) {
-    main{
-        display: flex;  
+
+    .containers {
+        float: left;
+        width: 30%;
     }
 }
 @media (min-width: 800px) {
