@@ -1,0 +1,36 @@
+/*                                general                                   */
+header {
+    display: none;
+}
+main{
+    text-align: left;
+}
+img {
+    margin-top: 10px;
+    height: 48px;
+    width: 48px;
+}
+/*             section en-tete              */
+h2,
+main section:first-child article:first-child p {
+    margin: 20px;
+}
+.temperature {
+    font-size: 2.5em;
+    color: #890C99;
+}
+main section:first-child article:last-child {
+    display: flex;
+    justify-content: space-around;
+}
+/*            section journalier              */
+/*                         responsive                              */
+@media (min-width: 650px ){
+}
+@media (min-width: 900px ){
+}
+@media (min-width: 1180px ){
+    header {
+        display: block;
+    }
+}

@@ -1,8 +1,11 @@
 /*----------------------------------------GENERAL------------------------------------*/
 * {
     margin: 0;
-    text-align: center;
     color: rgb(29, 29, 29);
+}
+body{
+    text-align: center;
+
 }
 h1 {
     line-height: 80px;

@@ -5,6 +5,7 @@ header {
 section {
     margin: 10px;
     background-color: rgb(145, 145, 145);
+    text-align: justify;
 }
 /*                               responsive                                */
 
@@ -16,7 +17,7 @@ section {
 }
 @media (min-width: 640px) {
     main{
-        display: flex;
+        display: flex;  
     }
 }
 @media (min-width: 800px) {
