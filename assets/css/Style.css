@@ -2,8 +2,7 @@
 * {
     margin: 0;
     text-align: center;
-    color: rgb(29, 29, 29)
-    ;
+    color: rgb(29, 29, 29);
 }
 h1 {
     line-height: 80px;
@@ -40,6 +39,10 @@ nav li a  {
 #pageActu {
     font-weight: 700;
     color: rgb(29, 29, 250);
+
+}
+#pageActu:hover {
+    color: black;
 
 }
 nav li a:hover {

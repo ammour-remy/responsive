@@ -1,0 +1,26 @@
+/*                                          General page Web                                */
+header {
+    display: none;
+}
+section {
+    margin: 10px;
+    background-color: rgb(145, 145, 145);
+}
+/*                               responsive                                */
+
+@media screen {
+    
+    footer {
+        display: none;
+    }
+}
+@media (min-width: 640px) {
+    main{
+        display: flex;
+    }
+}
+@media (min-width: 800px) {
+    header{
+        display: block;
+    }
+}
