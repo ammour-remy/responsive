@@ -72,7 +72,7 @@ main section:first-child p {
         display: block;
     }
     section {
-        width: 13%;
+        width: 14%;
         float: left;
     }
     .jour article{
@@ -87,6 +87,6 @@ main section:first-child p {
     main section:nth-child(2) {
         clear: bold;
         width: 96%;
-        height: 0;
+        height: 10px;
     }
 }
