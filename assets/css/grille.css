@@ -1,0 +1,31 @@
+.container-fluid {
+    width: 100%;
+}
+.col-sm-1 {
+    box-sizing: border-box;
+    border: 1px solid black;
+    float: left;
+   height: 100px;
+    width: calc((100%)/12);
+}
+@media (min-width: 700px) {
+    
+    .container-fluid {
+        width: 95%;
+        margin: auto;
+    }
+}
+@media (min-width: 900px) {
+    
+    .container-fluid {
+        width: 90%;
+        margin: auto;
+    }
+}
+@media (min-width: 1200px) {
+    .container-fluid {
+        width: 80%;
+        margin: auto;
+    }
+    
+}

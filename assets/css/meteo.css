@@ -1,6 +1,7 @@
 /*                                general                                   */
 header {
     display: none;
+    font-size: 1.2em;
 }
 main{
     text-align: left;
